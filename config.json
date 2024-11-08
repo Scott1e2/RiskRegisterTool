@@ -1,0 +1,66 @@
+{
+    "risk_factors": {
+        "data_sensitivity": 5,
+        "access_level": 3,
+        "compliance_impact": 4
+    },
+    "third_party_profiles": [
+        {
+            "name": "Vendor A",
+            "risk_score": 0,
+            "dependencies": [
+                "Critical System X",
+                "API Service Y"
+            ],
+            "baseline": "Moderate",
+            "compliance_requirements": [
+                "PCI-DSS",
+                "GDPR"
+            ]
+        },
+        {
+            "name": "Vendor B",
+            "risk_score": 0,
+            "dependencies": [
+                "Internal App Z"
+            ],
+            "baseline": "High",
+            "compliance_requirements": [
+                "HIPAA"
+            ]
+        }
+    ],
+    "questionnaire_mappings": {
+        "data_sensitivity": [
+            "high",
+            "moderate",
+            "low"
+        ],
+        "access_level": [
+            "public",
+            "restricted",
+            "confidential"
+        ],
+        "compliance_impact": [
+            "critical",
+            "important",
+            "minor"
+        ]
+    },
+    "baseline_tracking": {
+        "enable_baseline_tracking": true,
+        "baseline_threshold": 10,
+        "report_history_limit": 10
+    },
+    "alert_thresholds": {
+        "critical": 10,
+        "high": 7,
+        "medium": 5,
+        "low": 2
+    },
+    "compliance_mapping": {
+        "pci_dss": true,
+        "gdpr": true,
+        "hipaa": true
+    }
+}
