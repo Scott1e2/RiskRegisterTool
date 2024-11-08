@@ -1,0 +1,6 @@
+
+requests==2.26.0
+smtplib
+email
+json
+logging
